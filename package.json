@@ -1,7 +1,7 @@
 {
   "name": "GoneGrrr",
   "version": "0.0.0",
-  "description": "List keeper and destroyer",
+  "description": "Task keeper and destroyer",
   "repository": {
     "type": "git",
     "url": "https://github.com/bloc/GoneGrrr"
@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node server.js"
   },
-  "author": "Bloc Inc",
+  "author": "Paul Thompson",
   "license": "ISC",
   "dependencies": {
     "hapi": "~7.5.0",
