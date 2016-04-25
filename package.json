@@ -1,10 +1,10 @@
 {
-  "name": "bloc-frontend-project-starter",
-  "version": "0.0.2",
-  "description": "Starter project for the Bloc Frontend Web Development",
+  "name": "GoneGrrr",
+  "version": "0.0.0",
+  "description": "List keeper and destroyer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bloc/bloc-frontend-project-starter"
+    "url": "https://github.com/bloc/GoneGrrr"
   },
   "main": "server.js",
   "scripts": {
