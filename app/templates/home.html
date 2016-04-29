@@ -1,7 +1,11 @@
 <h1>ACTIVE TASKS</h1>
-<input ng-model='firstTask'></input>
-<button ng-click='addTask()'>Add new task</button><br>
-<div ng-repeat='task in tasks' ng-hide='hideCriteriaTest(task)'>{{task.taskTitle}}
+<input ng-model='firstTask'> Description</input><br><br>
+<select ng-model='taskPriority'
+        ng-options='x for x in taskPriorityList'
+        ng-change='setPriority(taskPriority)'>
+</select> Priority<br><br>
+<button ng-click='addTask()'>Add new task</button><br><br>
+<div ng-repeat='task in tasks | orderBy: "taskPriorityIndex"' ng-hide='hideCriteriaTest(task)'>{{task.taskTitle}} - {{task.taskPriority}}
     <input type='checkbox' ng-click='updateTaskCompleted()'>
 </div><br><br>
 <a ui-sref='task-history'>Task History</a>

@@ -25,15 +25,16 @@
 var app = angular.module('GoneGrrrapp', ['firebase','ui.router']);
     app.config(config);
     app.controller('GrrrController', function($scope, $firebaseArray) {
+        
         var ref = new Firebase('https://blistering-fire-9917.firebaseio.com');
         $scope.tasks = $firebaseArray(ref.child('tasks'));
+        
         setInterval(function () {
         var timeNow = Date.now()
             for(i =0; i < $scope.tasks.length; i++){
                 if ($scope.tasks[i].taskCompleted === true){
                     return
                 };
-                
                 var timeDiff = (timeNow-$scope.tasks[i].taskCreatedActual)
                 var expiredTime = (timeDiff/1000)/60;
                     if(expiredTime > 1){
@@ -59,6 +60,12 @@ var app = angular.module('GoneGrrrapp', ['firebase','ui.router']);
             }
         }
         
+        $scope.taskPriorityList = ['Low','Medium','High'];
+            $scope.setPriority = function(){
+                $scope.taskPrioritySelected = $scope.taskPriority;
+                $scope.priorityIndex = $scope.taskPriorityList.indexOf($scope.taskPriority);
+            }
+            
         $scope.addTask = function(){
                 $scope.createdTime = Date.now()
                 $scope.createdTimeString = new Date().toLocaleString()
@@ -68,6 +75,11 @@ var app = angular.module('GoneGrrrapp', ['firebase','ui.router']);
                     taskCompleted: false,
                     taskCreatedActual: $scope.createdTime,
                     taskCreated: $scope.createdTimeString,
+                    taskPriority: $scope.taskPrioritySelected,
+                    taskPriorityIndex: $scope.priorityIndex
                 });
+            $scope.taskPriorityList = [];
+            $scope.firstTask = '';
+            
             }
  });})();
