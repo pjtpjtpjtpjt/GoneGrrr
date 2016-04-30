@@ -1,11 +1,28 @@
-<h1>ACTIVE TASKS</h1>
-<input ng-model='firstTask'> Description</input><br><br>
-<select ng-model='taskPriority'
+<input ng-model='firstTask' class='description-box'> Task description</input><br><br>
+<select ng-model='taskPriority' 
         ng-options='x for x in taskPriorityList'
-        ng-change='setPriority(taskPriority)'>
-</select> Priority<br><br>
-<button ng-click='addTask()'>Add new task</button><br><br>
-<div ng-repeat='task in tasks | orderBy: "taskPriorityIndex"' ng-hide='hideCriteriaTest(task)'>{{task.taskTitle}} - {{task.taskPriority}}
-    <input type='checkbox' ng-click='updateTaskCompleted()'>
-</div><br><br>
-<a ui-sref='task-history'>Task History</a>
+        ng-change='setPriority(taskPriority)'
+        class='option-select'>
+        <option value=''>-- choose priority --</option>
+</select> Priority
+<button ng-click='addTask()' class='add-button'>Add new task</button><br><br>
+
+<h4 class='active-history-link'><strong>Active Tasks | <a ui-sref='task-history'>Task History</a></strong></h4>
+<table class='table table-striped'>
+    <tr>
+        <th>Mark complete</th>
+        <th>Priority</th>
+        <th>Task</th>
+    </tr>
+    <tr ng-repeat='task in tasks | orderBy: "taskPriorityIndex"' ng-hide='hideCriteriaTest(task)'>
+        <td>
+            <button ng-click='updateTaskCompleted()' class='btn btn-success' id='success-styling'>Complete task</button>
+        </td>
+        <td>
+            {{task.taskPriority}}
+        </td>
+        <td>
+            {{task.taskTitle}}
+        </td>
+    </tr>
+</table>

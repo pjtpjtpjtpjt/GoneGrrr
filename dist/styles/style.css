@@ -1,0 +1,27 @@
+body {
+    padding-left: 20px;
+}
+
+.add-button {
+   margin-left: 90px;
+}
+
+.active-history-link {
+    margin-bottom: 50px;
+}
+
+.history-spacer {
+    margin-top: 100px;
+}
+
+#success-styling {
+   color: black;
+}
+
+.description-box{
+    width: 400px;
+}
+
+#task-history-table{
+    margin-top: 100px;
+}

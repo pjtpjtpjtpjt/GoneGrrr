@@ -1,7 +1,7 @@
 {
   "name": "GoneGrrr",
   "version": "0.0.0",
-  "description": "Task keeper and destroyer",
+  "description": "Task manager",
   "repository": {
     "type": "git",
     "url": "https://github.com/bloc/GoneGrrr"

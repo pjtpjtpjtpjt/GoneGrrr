@@ -1,5 +1,20 @@
-<h1>TASK HISTORY</h1>
-<div ng-repeat='task in tasks | orderBy: "taskPriorityIndex"' ng-show='hideCriteriaTest(task)'>{{task.taskTitle}}
-    <input type='checkbox' ng-click='updateTaskCompleted()'>
-</div><br><br>
-<a ui-sref='home'>Home</a>
+<div class='history-spacer'></div>
+<h4 class='active-history-link'><strong><a ui-sref='home'>Active Tasks</a> | Task History</strong></h4>
+<table class='table table-striped'>
+    <tr>
+        <th>Unmark complete</th>
+        <th>Priority</th>
+        <th>Task</th>
+    </tr>
+    <tr ng-repeat='task in tasks | orderBy: "taskPriorityIndex"' ng-show='hideCriteriaTest(task)'>
+        <td>
+            <button ng-click='updateTaskCompleted()' ng-hide='!task.taskActive' class='btn btn-primary'>Uncomplete task</button>
+        </td>
+        <td>
+            {{task.taskPriority}}
+        </td>
+        <td>
+            {{task.taskTitle}}
+        </td>
+    </tr>
+</table>
