@@ -2,6 +2,8 @@
 
 Who doesn't want to be their own task master?
 
+![alt text](https://github.com/pjtpjtpjtpjt/GoneGrrr/blob/master/app/assets/images/GoneGrr_home_opt.jpg "GoneGrr main view")
+
 ### Easy Stuff ###
 1. Input a task in the Task description text box
 2. Choose a priority for the task in the *select*
