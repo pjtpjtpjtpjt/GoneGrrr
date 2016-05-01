@@ -14,4 +14,4 @@ Tasks expire after 7 days. But of course, since you're very organized and on top
 Completed and expired tasks will move to the *Task History* view. If the task is still unexpired and you want to bring it back to the *Active Tasks* view, just click **Uncomplete task**.
 
 ## What's up with that name? ##
-Sometimes you just want tasks Gone. And sometimes, when you gone them, you want to do it some emphasis: Grrr!
+Sometimes you just want tasks Gone. And sometimes, when you gone them, you want to do it with emphasis: Grrr!
