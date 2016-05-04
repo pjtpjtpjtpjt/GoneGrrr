@@ -69,10 +69,19 @@ module.exports = function(grunt) {
                 }
             }
         },
+        
+        sass: {
+            dist: {
+                files: {
+                    'dist/styles/style.css' : 'app/styles/style.scss'
+                }   
+            }
+        },
 
         clean: ['./dist']
     });
 
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');

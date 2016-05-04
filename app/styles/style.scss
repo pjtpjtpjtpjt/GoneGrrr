@@ -1,0 +1,45 @@
+$r: red;
+@mixin mTop($margin){
+   margin-top: $margin; 
+}
+
+body {
+    padding-left: 20px;
+}
+
+.add-button {
+   margin-left: 90px;
+}
+
+.active-history-link {
+    margin-bottom: 50px;
+}
+
+.history-spacer {
+    @include mTop(100px);
+}
+
+#success-styling {
+   color: black;
+}
+
+.description-box{
+    width: 400px;
+}
+
+#task-history-table{
+    @include mTop(100px);
+}
+
+body {
+    &:hover {
+        background-color: $r;
+    }
+    tr {
+        background-color: $r;
+        &:hover {
+            background-color: aqua;
+        }
+    }
+
+}
